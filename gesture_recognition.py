@@ -79,7 +79,7 @@ class GestureRecognizer:
 
 def main():
     recognizer = GestureRecognizer()
-    controller = DeviceController(arduino_port='COM3')
+    controller = DeviceController(use_mqtt=True)  # ⭐ MQTT 사용!
     cap = cv2.VideoCapture(0)
     
     print("=" * 60)

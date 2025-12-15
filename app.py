@@ -11,7 +11,7 @@ CORS(app)
 
 # 전역 변수
 recognizer = GestureRecognizer()
-controller = DeviceController(arduino_port='/dev/ttyUSB0')  # 또는 /dev/ttyACM0
+controller = DeviceController(use_mqtt=True)  # ⭐ MQTT 사용!
 current_gesture = "UNKNOWN"
 
 class GestureRecognitionThread(threading.Thread):
